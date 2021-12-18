@@ -57,8 +57,8 @@ body {
   
   button[type="submit"],
   input[type="submit"] {
-    background: #ec5990;
-    color: white;
+    background: #ecd659;
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     border: none;
     margin-top: 40px;
