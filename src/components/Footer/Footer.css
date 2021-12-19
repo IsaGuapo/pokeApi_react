@@ -1,9 +1,12 @@
-footer {
-    width: 100%;
-    height: 2.5rem;
-    background-color: rgba(0, 0, 0, 0.342);
+.div_footer{
+    /* background-color: #f1ebca; */
     color: white;
-    text-align: center;
-    position: fixed;
     bottom: 0;
+    padding: 1px;
+    text-align: center;
+
+   
+}
+p {
+    padding: 15px;
 }

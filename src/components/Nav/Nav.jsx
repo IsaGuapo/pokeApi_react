@@ -5,7 +5,7 @@ import './Nav.css';
 const Nav = () => {
   return <div >
     <ul>
-        <li className="liNav"><Link to="/home">Home</Link></li>
+        <li className="liNav"><Link to="/">Home</Link></li>
         <li className="liNav"><Link to="/pokemons">Pokemons</Link></li>
         <li className="liNav"><Link to="/Pokebounce">Pokebounce</Link></li>
     </ul>

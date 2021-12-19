@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import { useForm } from "react-hook-form";
 import "./Home.css";
+import Cardhomepoke from './Cardhomepoke';
 
 export default function App() {
 //para formulario de la libreria
@@ -18,7 +19,10 @@ const [givePokemons, setGivePokemons] = useState([]);
     const getPokemons = async () =>{
         const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/${givePokemons}`);
     //para guardar la imagen y la mete en pokemons.Lo que me traigo del json de la api
-        setPokemons(resp.data.sprites.front_default); 
+        setPokemons({
+          img: resp.data.sprites.front_default,
+          name: resp.data.name
+          }); 
     }
     getPokemons();
   },[givePokemons]);
@@ -31,12 +35,14 @@ const [givePokemons, setGivePokemons] = useState([]);
 
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <input {...register("name")} />
-      <input type="submit" />
-      <ul>
-        <li> <img src={pokemons} alt="" /></li>
-      </ul>
-    </form>
+    <div className='div_container'>
+      <h5> Search your Pokemon </h5>
+      <form onSubmit={handleSubmit}>
+        <input {...register("name")} />
+        <input type="submit" />
+        <Cardhomepoke pokemons={pokemons} />
+      </form>
+    </div>
+    
   );
 }

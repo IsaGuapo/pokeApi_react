@@ -70,7 +70,7 @@ body {
   
   button[type="submit"]:hover,
   input[type="submit"]:hover {
-    background: #bf1650;
+    background: #e76291;
   }
   
   button[type="submit"]:active,
@@ -126,4 +126,10 @@ body {
     padding: 10px 20px;
     border-radius: 4px;
   }
+/**************************************/
+h5{
+  color:white;
+ 
+  
+}
   
