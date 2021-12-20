@@ -6,7 +6,7 @@ const Nav = () => {
   return <div >
     <ul>
         <li className="liNav"><Link to="/">Home</Link></li>
-        <li className="liNav"><Link to="/pokemons">Pokemons</Link></li>
+        <li className="liNav"><Link to="/pokemons">Pokelist</Link></li>
         <li className="liNav"><Link to="/Pokebounce">Pokebounce</Link></li>
     </ul>
     </div>;
