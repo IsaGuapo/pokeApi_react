@@ -11,25 +11,33 @@ const Pokebounce = () => {
   const [pokemons, setPokemons] = useState([]);
   const [givePokemons, setGivePokemons] = useState("");
   //debounce
-  const [debouncedText] = useDebounce(givePokemons, 1000);
+  const [debouncedText] = useDebounce(givePokemons, 2000);
+
+
 
   useEffect(() => {
-    const getPokemons = async () => {
+    const getPokemons = async () =>{
       try {
-        const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/${debouncedText}`);
-        setPokemons([...pokemons,
-        {
-          img: resp.data.sprites.front_default,
-          name: resp.data.name
-        }])
+        if (debouncedText !== "") {
+          if(pokemons.some(pokemon => pokemon.name === givePokemons)){
+              alert("Pokemon already exists")
+        // Petición a la PokeApi 
+      } else {
+        const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/${debouncedText}`)
+        // seteamos el objeto del pokemon 
+          setPokemons([...pokemons, {
+            name: resp.data.name,
+            img: resp.data.sprites.front_default,
+          
+          }])}
+        }
       } catch (e) {
         setPokemons([])
+        console.log("This pokemon does not exist or the field is empty")
       }
-    }
-    getPokemons();
-
-  }, [debouncedText]); 
-  console.log(pokemons)
+    } 
+    getPokemons()
+  }, [debouncedText])
 
 
 
@@ -42,10 +50,12 @@ const Pokebounce = () => {
       <h5> Search your Pokemon </h5>
       <form>
         <input {...register("name")} onChange={(e) => {
-          setGivePokemons(e.target.value);
+          // if (e.target.value != null) {
+            setGivePokemons(e.target.value)
+          // }
         }} />
-        {paintPokemons()}
       </form>
+      {paintPokemons()}
     </div>
 
   );
