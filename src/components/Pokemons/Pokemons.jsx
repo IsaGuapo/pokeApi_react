@@ -20,7 +20,7 @@ useEffect(() => {
   const getPokemons = async () =>{
     try{
       const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/${givePokemons}`);
-      //para guardar la imagen y la mete en pokemons.Lo que me traigo del json de la api
+    //para guardar la imagen y la mete en pokemons.Lo que me traigo del json de la api
     //Con el spread
           setPokemons([...pokemons,
             {
@@ -35,7 +35,7 @@ useEffect(() => {
   },[givePokemons]); //ejecuta y actualiza el usseEffect
   console.log(pokemons)
 
-//funcion para setear el nombre que entre del pkemon por formulario
+//funcion para setear el nombre que entre del pokemon por formulario
 const handleSubmit =(e) =>{
   e.preventDefault();
   setGivePokemons(e.target.name.value) 
@@ -43,7 +43,7 @@ const handleSubmit =(e) =>{
   e.target.name.value=""
 } 
 
-
+//funcion para pintar pokemons
 const paintPokemons = () => {
   return pokemons.map((card, i) => <Cardpoke pokemons={card}  key={i} />)
 }
