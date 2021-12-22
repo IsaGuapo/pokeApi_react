@@ -7,13 +7,13 @@ import Cardhomepoke from './Cardhomepoke';
 export default function Home() {
 //para formulario de la libreria
   const { register } = useForm();
-
-
 //useState es mi estado inicial
-const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState([]);
 // para poder recoger lo que entra por el formulario. Va almacenar el name de pokemon 
 // SetgivePokemos el que actualiza los datos
-const [givePokemons, setGivePokemons] = useState("");
+  const [givePokemons, setGivePokemons] = useState("");
+
+
 
 //axios para traer info de la api Pokemon 
   useEffect(() => {
