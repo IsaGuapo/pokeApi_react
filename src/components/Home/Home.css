@@ -55,7 +55,7 @@ body {
     font-weight: 200;
   }
   
-  button[type="submit"],
+ 
   input[type="submit"] {
     background: #ecd659;
     color: rgb(0, 0, 0);
@@ -68,12 +68,12 @@ body {
     letter-spacing: 10px;
   }
   
-  button[type="submit"]:hover,
+
   input[type="submit"]:hover {
     background: #e76291;
   }
   
-  button[type="submit"]:active,
+
   input[type="button"]:active,
   input[type="submit"]:active {
     transition: 0.3s all;
@@ -90,7 +90,7 @@ body {
     transition: 0.3s all;
   }
   
-  button[type="submit"],
+
   input[type="button"],
   input[type="submit"] {
     -webkit-appearance: none;
@@ -101,31 +101,13 @@ body {
     margin: 0 auto;
   }
   
-  button[type="button"] {
-    display: block;
-    appearance: none;
-    background: #333;
-    color: white;
-    border: none;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 4px;
-  }
   
   hr {
     margin-top: 30px;
   }
   
-  button {
-    display: block;
-    appearance: none;
-    margin-top: 40px;
-    border: 1px solid #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 4px;
-  }
+ 
+  
 /**************************************/
 h5{
   color:white;

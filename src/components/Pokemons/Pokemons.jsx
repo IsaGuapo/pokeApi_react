@@ -7,13 +7,12 @@ import Cardpoke from './Cardpoke';
 
 export default function Pokemons() {
 //para formulario de la libreria
-    const { register } = useForm();
-  
-  
+    const { register } = useForm();    
 //Pokemos y givePokemons son mis state en Hooks . Set...es lo que actualiza mi state
   const [pokemons, setPokemons] = useState([]);
 // para poder recoger lo que entra por el formulario. Va almacenar el name de pokemon 
   const [givePokemons, setGivePokemons] = useState("");
+  
   
 //axios para traer info de la api Pokemon.esta funcion hace la precarga y cuando entra una actualizacion la vuelve a cargar.En este caso con el nombre del pokemon
 useEffect(() => {
