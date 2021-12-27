@@ -1,3 +1,13 @@
+GET STARTED
+
+Dentro de tu visual deberas hacer un 
+npm i
+
+Y se abrirá el proyecto con un 
+npm start
+
+
+REQUISITOS PARA HACER ESTE EJERCICIO:
 
 PRIMERA PARTE:
 pokeapi
