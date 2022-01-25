@@ -1,20 +1,24 @@
-GET STARTED
 
-Dentro de tu visual deberas hacer un 
+
+POKE API
+![image](https://user-images.githubusercontent.com/90551549/150981231-0a7cc8b4-2224-4b42-b7e0-be0b8973aa90.png)
+
+Descripción:
+  Proyecto creado con React para trabjo con componentes y todas sus funcionalidades.
+  Uso de Hooks
+  Trabajo con CSS y librerias externas si es necsario, en este caso se ha empleado Bootstrap
+
+GET STARTED
 npm i
 
 Y se abrirá el proyecto con un 
 npm start
 
 
-REQUISITOS PARA HACER ESTE EJERCICIO:
+Objetivos: 
+ React funcional y  uso de los Hooks useState() y useEffect()
 
-PRIMERA PARTE:
-pokeapi
-En este ejercicio trabajaremos con React funcional y haremos uso de los Hooks useState() y useEffect()
-
-En este ejercicio tendréis que jugar con la Pokeapi. Se dividirá en los siguientes pasos:
-
+Debe contener:
 Crea un input de texto.
 Crea un botón.
 Crea un componente Card en el que dibujaremos los datos del personaje obtenido
